@@ -39,7 +39,7 @@ function check_vbox_latest_ver() {
     --fail \
     https://download.virtualbox.org/virtualbox/ \
     | sed --quiet 's/.*href="\([^"]*\).*/\1/p' \
-    | sed --quiet 's/\/*$//g' \
+    | sed 's/\/*$//g' \
     | grep --invert-match '[[:alpha:]]' \
     | sort --version-sort \
     | tail --lines 1
