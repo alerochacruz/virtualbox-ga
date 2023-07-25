@@ -27,6 +27,7 @@ sudo apt --yes install \
   build-essential \
   dkms \
   linux-headers-"$(uname --kernel-release)" \
+  curl \
   wget
 
 # Function: retrieve the latest version number of VirtualBox
